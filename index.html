@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Web Layout - Case 2</title>
+    <meta content="IJSE, CMJD, Basic Web Layout, RWAD" name="keywords">
+    <meta content="This is for demonstrate how to make a simple web page using css positions" name="description">
+    <meta content="Institute of Software Engineering" name="author">
+    <meta content="Institute of Software Engineering" name="owner">
+    <link href="assets/css/normalize.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+    <style>
+        header{
+            position: relative;
+            height: 80px;
+            box-shadow: -2px 6px 9px -4px #917a7a;
+        }
+        header>img{
+            width: 213px;
+            margin: 21px;
+        }
+        header>ul{
+            position: absolute;
+            right: 30px;
+            bottom: 0;
+            font-size: 24px;
+            font-family: 'Lobster', cursive;
+            list-style: none;
+            color: #4a3a3a;
+
+        }
+        header>ul>li{
+            padding: 0 10px 0 10px;
+            display: inline-block;
+        }
+        header>ul>li:hover{
+            cursor: pointer;
+            color: red;
+        }
+
+        body>footer{
+            height: 50px;
+            margin: 10px;
+            background-color: dimgray;
+        }
+        footer>p{
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin: 0;
+        }
+        main{
+            position: relative;
+        }
+        main>nav{
+            width: 300px;
+            background: purple;
+            top: 0;
+            bottom: 0;
+            position: absolute;
+        }
+        main>section{
+            margin-left: 300px;
+            padding: 10px;
+        }
+        main>nav>ul>li{
+            color: white;
+            font-size: 20px;
+            padding: 10px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        p::selection{
+            background: greenyellow;
+            color: white;
+        }
+        main > section > section {
+            position: relative;
+            height: 350px;
+            border: 1px solid black;
+        }
+
+        main > section > section > div {
+            height: 100%;
+            width: calc((100% / 3) * 1);
+            position: absolute;
+            border: 1px dashed black;
+        }
+
+        main > section > section > div:nth-child(1) {
+            left: 0;
+            background: url("assets/images/mahinda.png");
+            background-size: cover;
+            background-position: center;
+        }
+
+        main > section > section > div:nth-child(2) {
+            left: calc((100% / 3) * 1);
+            background: url("assets/images/mahinda.png");
+            background-size: cover;
+            background-position: center;
+        }
+
+        main > section > section > div:nth-child(3) {
+            left: calc((100% / 3) * 2);
+            background: url("assets/images/mahinda.png");
+            background-size: cover;
+            background-position: center;
+        }
+
+    </style>
+</head>
+<body>
+<header>
+    <img src="assets/images/ijselogo.png" alt="">
+
+    <ul>
+        <li>Home</li>
+        <li>Service</li>
+        <li>Contacts</li>
+        <li>About Us</li>
+    </ul>
+
+</header>
+<main>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>Service</li>
+            <li>Contacts</li>
+            <li>About Us</li>
+        </ul>
+
+    </nav>
+    <section>
+        <section>
+            <div></div>
+            <div></div>
+            <div></div>
+        </section>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam ducimus ea ipsam nam perferendis provident
+            quam sit, tempore voluptatibus? Ab, accusamus dolor enim eos natus praesentium quia tempore vitae
+            voluptate!</p>
+        <p>Accusantium culpa delectus dignissimos, dolorem ipsam ipsum maxime nemo non officiis omnis pariatur quisquam
+            ratione reiciendis reprehenderit sit velit veniam voluptatem! Dignissimos, harum impedit labore laborum
+            minima omnis perspiciatis sunt?</p>
+        <p>Ab animi cum deserunt dolore dolores ea facere laboriosam maxime obcaecati optio provident qui vel,
+            voluptatem! Cum dolor, fugit harum magnam nemo nobis non porro repellendus rerum tempore. Labore, quae?</p>
+        <p>Ad commodi labore modi, natus odit quia quod rerum tempore tenetur ut. Aliquam amet architecto blanditiis
+            corporis cupiditate delectus distinctio doloremque dolorum, ea eaque, laudantium modi nostrum officiis quam,
+            quod.</p>
+        <p>A ab aliquam consequatur dicta eaque eius, excepturi maxime nemo porro, quam quos recusandae reiciendis,
+            rerum voluptates voluptatum! Deserunt, sit, voluptates? Dolores doloribus iure maxime molestiae nemo quae
+            repellat vero?</p>
+        <p>Aliquid, atque beatae ipsam porro quidem recusandae rem repudiandae voluptates? A accusantium corporis ea hic
+            nam officia reprehenderit. Cupiditate doloremque ea facere facilis id labore laborum libero odit optio,
+            repellendus.</p>
+        <p>Aliquid commodi cum doloremque esse illo illum, minima minus nesciunt perferendis possimus praesentium
+            provident qui quisquam, repellendus, unde velit veniam! Cum nobis, tenetur! Adipisci aliquid consequatur
+            magnam odio tempora. Commodi!</p>
+        <p>Adipisci assumenda autem culpa dicta dolores eos est excepturi id impedit, incidunt ipsam libero nobis,
+            praesentium quaerat quibusdam quos reprehenderit. Dolore doloremque earum fugit reprehenderit? Aliquid dicta
+            eaque eius non.</p>
+    </section>
+</main>
+
+<footer>
+    <p>Developed By IJSE</p>
+
+</footer>
+</body>
+</html>
